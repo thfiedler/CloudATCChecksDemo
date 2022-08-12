@@ -18,13 +18,17 @@ ENDCLASS.
 
 
 
-CLASS zcl_atc_check_method_length IMPLEMENTATION.
+CLASS ZCL_ATC_CHECK_METHOD_LENGTH IMPLEMENTATION.
+
+
   METHOD constructor.
   ENDMETHOD.
+
 
   METHOD if_ci_atc_check~get_meta_data.
     meta_data = NEW meta_data( method_threshold ).
   ENDMETHOD.
+
 
   METHOD if_ci_atc_check~run.
     DATA finding TYPE if_ci_atc_check=>ty_finding.
@@ -48,13 +52,16 @@ CLASS zcl_atc_check_method_length IMPLEMENTATION.
     ENDLOOP.
   ENDMETHOD.
 
+
   METHOD if_ci_atc_check~set_assistant_factory.
   ENDMETHOD.
+
 
   METHOD if_ci_atc_check~set_attributes ##NEEDED.
     DATA(method_threshold) = attributes[ name = `MethodThreshold` ]-value.
     me->method_threshold = method_threshold->*.
   ENDMETHOD.
+
 
   METHOD if_ci_atc_check~verify_prerequisites ##NEEDED.
   ENDMETHOD.

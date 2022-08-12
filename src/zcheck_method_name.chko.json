@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Demo",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "category": "ZMY_NAMING_CONVENTION_CHECKS",
+  "implementingClass": "ZCL_ATC_CHECK_METHOD_LENGTH",
+  "checkType": "remoteEnabled",
+  "parameters": [
+    {
+      "name": "MethodThreshold",
+      "hidden": true
+    }
+  ]
+}
