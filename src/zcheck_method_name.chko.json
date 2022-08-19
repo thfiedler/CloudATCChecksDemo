@@ -11,7 +11,8 @@
   "parameters": [
     {
       "name": "MethodThreshold",
-      "description": "Threshold for method length"
+      "description": "Maximum length of method source",
+      "hidden": true
     }
   ]
 }

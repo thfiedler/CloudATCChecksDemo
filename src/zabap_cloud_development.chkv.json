@@ -377,7 +377,13 @@
       "checkName": "ZCREATE_OBJECT_NOT_ALLOWED"
     },
     {
-      "checkName": "ZCHECK_METHOD_NAME"
+      "checkName": "ZCHECK_METHOD_NAME",
+      "parameters": [
+        {
+          "name": "MethodThreshold",
+          "value": "20"
+        }
+      ]
     }
   ]
 }
