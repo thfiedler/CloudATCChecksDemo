@@ -1,16 +1,17 @@
 {
   "formatVersion": "1",
   "header": {
-    "description": "Demo",
+    "description": "Method length Check",
     "originalLanguage": "en",
     "abapLanguageVersion": "cloudDevelopment"
   },
-  "category": "ZMY_NAMING_CONVENTION_CHECKS",
+  "category": "ZTF_CUSTOM_CHECKS",
   "implementingClass": "ZCL_ATC_CHECK_METHOD_LENGTH",
   "checkType": "remoteEnabled",
   "parameters": [
     {
       "name": "MethodThreshold",
+      "description": "Threshold for method length",
       "hidden": true
     }
   ]
