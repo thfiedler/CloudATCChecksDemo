@@ -14,15 +14,17 @@ class zcl_tf_demo_class definition
   protected section.
   private section.
 
-endclass.
+ENDCLASS.
 
 
 
-class zcl_tf_demo_class implementation.
+CLASS ZCL_TF_DEMO_CLASS IMPLEMENTATION.
+
 
   method create.
     create object r_result.
   endmethod.
+
 
   method do_it.
     data tmp_1 type i.
@@ -49,4 +51,4 @@ class zcl_tf_demo_class implementation.
       when 'K'.
     endcase.
   endmethod.
-endclass.
+ENDCLASS.

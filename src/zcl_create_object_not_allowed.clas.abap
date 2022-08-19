@@ -31,15 +31,17 @@ CLASS zcl_create_object_not_allowed DEFINITION
 
     data assistant_factory type ref to cl_ci_atc_assistant_factory.
     data code type ref to if_ci_atc_source_code_provider.
-endclass.
+ENDCLASS.
 
 
 
-class zcl_create_object_not_allowed implementation.
+CLASS ZCL_CREATE_OBJECT_NOT_ALLOWED IMPLEMENTATION.
+
 
   method if_ci_atc_check~get_meta_data.
     meta_data = new meta_data( ).
   endmethod.
+
 
   method if_ci_atc_check~run.
     code = data_provider->get_code_provider( ).
@@ -49,13 +51,16 @@ class zcl_create_object_not_allowed implementation.
     endloop.
   endmethod.
 
+
   method if_ci_atc_check~set_assistant_factory.
     assistant_factory = factory.
   endmethod.
 
+
   method if_ci_atc_check~verify_prerequisites.
 
   endmethod.
+
 
   method analyze_procedure.
     loop at procedure-statements assigning field-symbol(<statement>)
@@ -82,6 +87,7 @@ class zcl_create_object_not_allowed implementation.
     endloop.
   endmethod.
 
+
   method construct_new_from_create.
     data(target) = statement-tokens[ 3 ]-lexeme.
     if lines( statement-tokens ) > 3.
@@ -99,6 +105,7 @@ class zcl_create_object_not_allowed implementation.
     new = break_into_lines( |{ target } = NEW { cond #( when has_type_specified = abap_true then specified_type else '#' ) }( { arguments } ).| ).
   endmethod.
 
+
   method break_into_lines.
     constants allowed_line_length type i value 255.
     data(remaining_chunk) = strlen( code ).
@@ -110,8 +117,8 @@ class zcl_create_object_not_allowed implementation.
     endwhile.
   endmethod.
 
+
   METHOD flatten_tokens.
     code = REDUCE #( INIT str = `` FOR tok IN tokens NEXT str = |{ str }{ tok-lexeme } | ).
   ENDMETHOD.
-
 ENDCLASS.

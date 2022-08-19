@@ -11,8 +11,7 @@
   "parameters": [
     {
       "name": "MethodThreshold",
-      "description": "Threshold for method length",
-      "hidden": true
+      "description": "Threshold for method length"
     }
   ]
 }
