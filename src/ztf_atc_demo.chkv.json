@@ -1,0 +1,19 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Demo",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "selectedChecks": [
+    {
+      "checkName": "ZCHECK_METHOD_LENGTH",
+      "parameters": [
+        {
+          "name": "MethodThreshold",
+          "value": "10"
+        }
+      ]
+    }
+  ]
+}

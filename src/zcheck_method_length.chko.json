@@ -1,0 +1,17 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Method length check",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "category": "CI_ROBUSTNESS",
+  "implementingClass": "ZCL_ATC_CHECK_METHOD_LENGTH",
+  "checkType": "remoteEnabled",
+  "parameters": [
+    {
+      "name": "MethodThreshold",
+      "description": "Threshold for the length of the method"
+    }
+  ]
+}
